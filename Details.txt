@@ -1,0 +1,77 @@
+
+Topics:
+
+  1. Usage of Keys
+    key props for a component is used to identify the element uniquely by VDOM
+    ** Do not use array index for key in component that will lead to confusion during CRUD interactions **
+
+  2. Conditional rendering
+    Rendering the JSX Elements Conditionally
+      {<boolean-value-evaluation> && ( JSX Element )}
+      {<boolean-value-evaluation> ? (this JSX Element) : (that JSX Element)}
+
+  3. Styles and Module styles
+      inline style --> using it as object
+      HTML Inline
+      <img src='https://image.com/image.png' style="height: 200px; width: 100px" />
+      React Inline
+      <img src={props.imageUrl} style={{ height: '200px', width: '100px' }} />
+
+      External Styling:
+        normal styling using .css
+        module styling using .module.css
+          import styles from './movie.module.css';
+          module styling only classNames and tags are allowed
+  
+  4. State --> is value in the rendered JSX that changes during any events
+      
+      Pimary in React:
+
+        ****** Do Not Touch Document Object in React ******
+
+        it is CRIME if You do so
+      
+      rendering & re-rendering parts of react
+
+        Normal JSX Syntax will render only once without any state hooks
+
+      Hooks:
+        Hooking setup between the memory of the JS and JSX Element
+
+        when a memory of JS changes( Hook memory value ), JSX automatically re-renders
+      
+      State Hook:
+        holds a value which will change during events 
+        a change in the value will re-render and update the value in the client-side html
+
+  5. Stateful & Stateless component
+
+      Stateful component is component which has a state value which changes
+
+      Stateless -> Component which does not have a state value rather have only static values
+
+      Props ---> static values passed during rendering
+      State --> a value change which causing the re-rendering
+  
+  6. Reusable Components:
+      Trying to re-reuse the parts of the 
+
+      Always look for commanalities in the design and write resusable components with same props
+
+Task:
+
+  Day-22: https://docs.google.com/document/d/1erFPRTYe9d3V9QRwmEw8mxOI0ZeQ3_HklTtXwA3Ilco/edit
+
+Next Session:
+
+  7. Component Life Cycle:
+
+      Initialization: JS Loads the JSX into the memory
+
+      Mounting: JSX gets loaded into the RealDOM
+
+      Updating: Some contents or state gets updated in the RealDOM
+
+      Unmounting: Removign the element from the RealDOM
+  
+  8. Passing Dynamic Data to the Components
